@@ -57,35 +57,35 @@ class LaptopControllerTest {
 //        assertEquals(404, response.getStatusCode());
 //    }
 
-    @DisplayName("Comprobar Create desde controladores Spring REST")
-    @Test
-    void create() {
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_JSON);
-        headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+//    @DisplayName("Comprobar Create desde controladores Spring REST")
+//    @Test
+//    void create() {
+//        HttpHeaders headers = new HttpHeaders();
+//        headers.setContentType(MediaType.APPLICATION_JSON);
+//        headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 
-        String json = """
-                
-    {
-        "brand": "Apple",
-        "model": "AirBook",
-        "screenInches": 13.1,
-        "price": 489.99,
-        "releaseDate": "2015-11-15",
-        "onLine": true
-    }
-                
-                """;
+//        String json = """
+//
+//    {
+//        "brand": "Apple",
+//        "model": "AirBook",
+//        "screenInches": 13.1,
+//        "price": 489.99,
+//        "releaseDate": "2015-11-15",
+//        "onLine": true
+//    }
+//
+//                """;
 
-        HttpEntity<String> request = new HttpEntity<>(json, headers);
-
-        ResponseEntity<Laptop> response =testRestTemplate.exchange("/api/laptops", HttpMethod.POST, request, Laptop.class);
-
-        Laptop result = response.getBody();
-
-        assertEquals("Apple", result.getBrand());
-
-    }
+//        HttpEntity<String> request = new HttpEntity<>(json, headers);
+//
+//        ResponseEntity<Laptop> response =testRestTemplate.exchange("/api/laptops", HttpMethod.POST, request, Laptop.class);
+//
+//        Laptop result = response.getBody();
+//
+//        assertEquals("Apple", result.getBrand());
+//
+//    }
 
     @DisplayName("Comprobar Update desde controladores Spring REST")
     @Test
