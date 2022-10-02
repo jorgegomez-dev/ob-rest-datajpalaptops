@@ -11,6 +11,11 @@ public class HelloController {
         return "Hola Mundo como estas crack hoy!!!";
     }
 
+    @GetMapping("/hola/notpermitted")
+    public String holaMundoNotPermitted(){
+        return "Hola Mundo no permitido!!!";
+    }
+
 //    @GetMapping("/bootstrap")
 //    public String bootstrap(){
 //        return """
