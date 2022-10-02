@@ -13,7 +13,7 @@ public class HelloController {
 
     @GetMapping("/hola/notpermitted")
     public String holaMundoNotPermitted(){
-        return "Hola Mundo no permitido!!!";
+        return "Ponete a estudiar Onga!!!";
     }
 
 //    @GetMapping("/bootstrap")
