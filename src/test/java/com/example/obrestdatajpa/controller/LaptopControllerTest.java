@@ -42,6 +42,7 @@ class LaptopControllerTest {
 
         assertEquals(HttpStatus.OK, response.getStatusCode()); // Devuelve status 200
         assertEquals(200, response.getStatusCodeValue()); // Devuelve status 200
+        assertEquals(401, response.getStatusCodeValue()); // Devuelve status 401
 
         List<Laptop> laptops = Arrays.asList(response.getBody());
         System.out.println(laptops.size());
